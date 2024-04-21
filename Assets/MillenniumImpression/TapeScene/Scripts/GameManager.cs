@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MillenniumImpression.TapeScene
 {
-    public class GameManager : GenericGameManager
+    public class GameManager : GenericGameManager, ITapeEvent
     {
         public static GameManager instance;
 
@@ -12,17 +12,15 @@ namespace MillenniumImpression.TapeScene
         private CassetteMachineDoor cassetteMachineDoor;
 
         [SerializeField]
-        private GameObject tapeTarget;
-        [SerializeField]
-        private GameObject chineseTarget;
+        private GameObject arrow;
 
-        [SerializeField]
-        private MusicPlayers musicPlayers;
+        private readonly ITapeEvent[] eventObjects = new ITapeEvent[2];
 
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();
             instance = this;
+            eventObjects[0] = tape;
+            eventObjects[1] = cassetteMachineDoor;
         }
 
         private void OnDestroy()
@@ -32,42 +30,31 @@ namespace MillenniumImpression.TapeScene
 
         public override void OnTargetFound()
         {
-            base.OnTargetFound();
-            tape.OnTargetFound();
-            cassetteMachineDoor.OnTargetFound();
-            chineseTarget.SetActive(false);
+            if (tape.touchedMachine) //已經碰過了 就無所謂了
+                return;
+            hintText.gameObject.SetActive(false);
+            foreach (ITapeEvent eventObject in eventObjects)
+                eventObject.OnTargetFound();
         }
 
         public override void OnTargetLost()
         {
             if (tape.touchedMachine) //已經碰過了 就無所謂了
                 return;
-            base.OnTargetLost();
-            tape.OnTargetLost();
-            cassetteMachineDoor.OnTargetLost();
+            foreach (ITapeEvent eventObject in eventObjects)
+                eventObject.OnTargetLost();
         }
 
         public void OnTapeReachedMachine()
         {
-            tape.OnTapeReachedMachine();
-            cassetteMachineDoor.OnTapeReachedMachine();
+            arrow.SetActive(false);
+            foreach (ITapeEvent eventObject in eventObjects)
+                eventObject.OnTapeReachedMachine();
         }
 
         public void OnMachineClose()
         {
-            chineseTarget.SetActive(true);
-            tapeTarget.SetActive(false);
             nextButton.gameObject.SetActive(true);
-        }
-
-        public void OnChineseTargetFound()
-        {
-            musicPlayers.OnChineseTargetFound();
-        }
-
-        public void OnChineseTargetLost()
-        {
-            musicPlayers.OnChineseTargetLost();
         }
     }
 }

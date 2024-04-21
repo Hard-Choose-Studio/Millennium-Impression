@@ -7,25 +7,21 @@ namespace MillenniumImpression
 {
     public class ChangeButton : GenericButton
     {
-        /*[SerializeField]
-        private ChangeButton anotherButton;*/
         [SerializeField]
         private string targetScene;
         [SerializeField]
         private RawImage transitionImage;
 
         private Button thisButton;
-        //private Button thatButton;
 
         private void Awake()
         {
             thisButton = GetComponent<Button>();
-            //thatButton = anotherButton.GetComponent<Button>();
         }
 
         public override void OnClick()
         {
-            thisButton.enabled/* = thatButton.enabled*/ = false;
+            thisButton.enabled = false;
             StartCoroutine(LoadSceneTransition());
         }
 
@@ -36,9 +32,9 @@ namespace MillenniumImpression
             while (!asyncOperation.isDone)
             {
                 Color newColor = transitionImage.color;
-                newColor.a = 1.0F - asyncOperation.progress;
+                newColor.a = asyncOperation.progress;
                 transitionImage.color = newColor;
-                yield return null;
+                yield return new WaitForSeconds(1.0F);
             }
         }
     }

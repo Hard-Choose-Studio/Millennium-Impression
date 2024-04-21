@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MillenniumImpression.TapeScene
 {
-    public class CassetteMachineDoor : MonoBehaviour
+    public class CassetteMachineDoor : MonoBehaviour, ITapeEvent
     {
         private HasFoundLost hasFoundLost;
 
@@ -14,17 +14,17 @@ namespace MillenniumImpression.TapeScene
 
         public void OnTargetFound()
         {
-            hasFoundLost.SetTargetFound();
+            hasFoundLost.SetTargetFound(); //開門
         }
 
         public void OnTargetLost()
         {
-            hasFoundLost.SetTargetLost();
+            hasFoundLost.SetTargetLost(); //回到idle
         }
 
-        internal void OnTapeReachedMachine()
+        public void OnTapeReachedMachine()
         {
-            hasFoundLost.SetAnimatorValue("closeDoor");
+            hasFoundLost.SetAnimatorValue("closeDoor"); //關門
         }
     }
 }

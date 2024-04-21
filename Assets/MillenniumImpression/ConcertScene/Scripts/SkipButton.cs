@@ -1,20 +1,17 @@
 using UnityEngine;
 
-namespace MillenniumImpression.TapeScene
+namespace MillenniumImpression.ConcertScene
 {
     public class SkipButton : GenericButton
     {
         [SerializeField]
-        private MusicPlayers musicPlayers;
+        private MusicPlayer musicPlayer;
         [SerializeField]
         private bool isPrevious;
 
         public override void OnClick()
         {
-            if (isPrevious)
-                musicPlayers.PreviousSong();
-            else
-                musicPlayers.NextSong();
+            musicPlayer.ChangeSong(isPrevious);
         }
     }
 }

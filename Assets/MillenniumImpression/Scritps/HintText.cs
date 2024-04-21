@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace MillenniumImpression
 {
-    public class HintText : MonoBehaviour, IResettable
+    public class HintText : MonoBehaviour
     {
         private Text text;
         private float tick = 0;
@@ -24,11 +24,6 @@ namespace MillenniumImpression
             Color newColor = text.color;
             newColor.a = 1 - text.color.a;
             text.color = newColor;
-        }
-
-        public void ResetObject()
-        {
-            gameObject.SetActive(true);
         }
     }
 }

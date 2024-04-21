@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MillenniumImpression.TapeScene
 {
-    public class Tape : MonoBehaviour
+    public class Tape : MonoBehaviour, ITapeEvent
     {
         [SerializeField]
         private Transform cassetteMachineTransform;
@@ -63,12 +63,6 @@ namespace MillenniumImpression.TapeScene
                 touchedMachine = true;
         }
 
-        internal void OnTapeReachedMachine()
-        {
-            updateAction = GenericGameManager.EMPTY_ACTION;
-            transform.SetLocalPositionAndRotation(new(0.2707F, -0.0171F, 0.0637F), Quaternion.Euler(0, -110, 90));
-        }
-
         public void OnTargetFound()
         {
             updateAction = moveAction;
@@ -79,6 +73,12 @@ namespace MillenniumImpression.TapeScene
         {
             updateAction = GenericGameManager.EMPTY_ACTION;
             transform.SetLocalPositionAndRotation(originPosition, originRotation);
+        }
+
+        public void OnTapeReachedMachine()
+        {
+            updateAction = GenericGameManager.EMPTY_ACTION;
+            transform.SetLocalPositionAndRotation(new(0.2707F, -0.0171F, 0.0637F), Quaternion.Euler(0, -110, 90));
         }
     }
 }
