@@ -12,16 +12,9 @@ namespace MillenniumImpression
         [SerializeField]
         private RawImage transitionImage;
 
-        private Button thisButton;
-
-        private void Awake()
-        {
-            thisButton = GetComponent<Button>();
-        }
-
         public override void OnClick()
         {
-            thisButton.enabled = false;
+            button.enabled = false;
             StartCoroutine(LoadSceneTransition());
         }
 

@@ -20,9 +20,7 @@ namespace MillenniumImpression
             RenderTexture.active = renderTexture;
         }
 
-        public void Play()
-        {
-            videoPlayer.Play();
-        }
+        public void Play() => videoPlayer.Play();
+        public void Stop() => videoPlayer.Stop();
     }
 }

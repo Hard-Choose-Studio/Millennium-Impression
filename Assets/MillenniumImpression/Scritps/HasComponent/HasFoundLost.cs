@@ -2,14 +2,8 @@ namespace MillenniumImpression
 {
     public class HasFoundLost : HasAnimator
     {
-        internal void SetTargetFound()
-        {
-            SetAnimatorValue("isTargetFound", true);
-        }
+        public void SetTargetFound() => animator.SetBool("isTargetFound", true);
 
-        internal void SetTargetLost()
-        {
-            SetAnimatorValue("isTargetFound", false);
-        }
+        public void SetTargetLost() => animator.SetBool("isTargetFound", false);
     }
 }
