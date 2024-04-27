@@ -23,10 +23,10 @@ namespace MillenniumImpression.ConcertScene
 
         private void Start()
         {
-            foreach (HasVideoPlayer player in instruments)
+            foreach (HasVideoPlayer instrument in instruments)
             {
-                player.ClearRenderTexture();
-                player.Play();
+                instrument.ClearRenderTexture();
+                instrument.Play();
             }
         }
 

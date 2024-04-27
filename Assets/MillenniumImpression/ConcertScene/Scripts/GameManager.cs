@@ -17,8 +17,10 @@ namespace MillenniumImpression.ConcertScene
 
         public override void OnTargetLost()
         {
-            hintText.gameObject.SetActive(true);
-            nextButton.gameObject.SetActive(false);
+            if (hintText != null)
+                hintText.gameObject.SetActive(true);
+            if (nextButton != null)
+                nextButton.gameObject.SetActive(false);
 
             musicPlayer.OnTargetLost();
         }

@@ -5,6 +5,7 @@ namespace MillenniumImpression
 {
     public class HasVideoPlayer : MonoBehaviour
     {
+        //VideoPlayer的包裹類別
         private VideoPlayer videoPlayer;
 
         private void Awake()
@@ -21,6 +22,9 @@ namespace MillenniumImpression
         }
 
         public void Play() => videoPlayer.Play();
+
         public void Stop() => videoPlayer.Stop();
+
+        public VideoPlayer GetVideoPlayer() => videoPlayer;
     }
 }

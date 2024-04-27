@@ -60,25 +60,38 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.21f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\Bicycle.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\SportCar.cs" />
+    <Compile Include="Assets\MillenniumImpression\WataliScene\Scripts\SoundPlayer.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\ITapeEvent.cs" />
+    <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\AquaOil.cs" />
+    <Compile Include="Assets\MillenniumImpression\Scritps\HasComponent\HasSpriteRenderer.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\HasComponent\HasAnimator.cs" />
+    <Compile Include="Assets\MillenniumImpression\WataliScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\Tape.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\IPonkyEvent.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\HasComponent\HasFoundLost.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\ChangeButton.cs" />
+    <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\Smoke.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\CassetteMachineDoor.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\GenericGameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\ConcertScene\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\ConcertScene\Scripts\SkipButton.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\IEvent.cs" />
+    <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\GameManager.cs" />
+    <Compile Include="Assets\MillenniumImpression\WataliScene\Scripts\Yvon.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\HasComponent\HasVideoPlayer.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\GenericButton.cs" />
     <Compile Include="Assets\MillenniumImpression\ConcertScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\Scritps\HintText.cs" />
+    <Compile Include="Assets\MillenniumImpression\Scritps\XYZ.cs" />
     <Compile Include="Assets\MillenniumImpression\ConcertScene\Scripts\IConcertEvent.cs" />
+    <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\FruitGenerator.cs" />
+    <Compile Include="Assets\MillenniumImpression\WataliScene\Scripts\IWataliEvent.cs" />
+    <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\IAquaOilEvent.cs" />
+    <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\Fruit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

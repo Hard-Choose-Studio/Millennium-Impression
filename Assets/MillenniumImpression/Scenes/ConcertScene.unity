@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de470f2d47652554ca2c0542f406f79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: GameScene
+  targetScene: AquaOilScene
   transitionImage: {fileID: 1911966486}
 --- !u!114 &85881993
 MonoBehaviour:

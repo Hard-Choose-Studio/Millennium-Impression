@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MillenniumImpression.PonkyScene
@@ -11,16 +9,18 @@ namespace MillenniumImpression.PonkyScene
 
         private void Awake()
         {
-            hasVideoPlayer = GetComponent<HasVideoPlayer>();
             hasFoundLost = GetComponent<HasFoundLost>();
+            hasFoundLost.AddAnimationEvent("stop_drive", () => GameManager.instance.OnCarStopDrive());
+
+            hasVideoPlayer = GetComponent<HasVideoPlayer>();
         }
 
         public void OnTargetFound()
         {
-            hasFoundLost.SetTargetFound();
+            hasFoundLost.SetTargetFound(); //開始開車
 
             hasVideoPlayer.ClearRenderTexture();
-            hasVideoPlayer.Play();
+            hasVideoPlayer.Play(); //播放影片
         }
 
         public void OnTargetLost()
@@ -32,7 +32,7 @@ namespace MillenniumImpression.PonkyScene
 
         public void OnCarStopDrive()
         {
-            throw new System.NotImplementedException();
+            hasVideoPlayer.GetVideoPlayer().Pause();
         }
     }
 }

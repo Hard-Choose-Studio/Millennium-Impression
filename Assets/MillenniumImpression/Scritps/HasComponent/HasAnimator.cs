@@ -8,7 +8,7 @@ namespace MillenniumImpression
     {
         protected Animator animator;
 
-        protected readonly Dictionary<string, Action> eventFunctions = new();
+        protected readonly Dictionary<string, Action> eventFunctions = new(); //動畫事件們 C# Action 約等於 Java Runnable
 
         private void Awake()
         {
