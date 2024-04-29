@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/MillenniumImpression/Scenes/TapeScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/MillenniumImpression/Scenes/ConcertScene.unity
-    guid: 200a03b1301647540a3c145803fb7723
-  - enabled: 1
     path: Assets/MillenniumImpression/Scenes/AquaOilScene.unity
     guid: 2a3e62d9aa4502d4d88740c329381351
   - enabled: 1

@@ -10,17 +10,20 @@ namespace MillenniumImpression.TapeScene
         private Tape tape;
         [SerializeField]
         private CassetteMachineDoor cassetteMachineDoor;
+        [SerializeField]
+        private MusicPlayer musicPlayer;
 
         [SerializeField]
         private GameObject arrow;
 
-        private readonly ITapeEvent[] eventObjects = new ITapeEvent[2];
+        private readonly ITapeEvent[] eventObjects = new ITapeEvent[3];
 
         private void Awake()
         {
             instance = this;
             eventObjects[0] = tape;
             eventObjects[1] = cassetteMachineDoor;
+            eventObjects[2] = musicPlayer;
         }
 
         private void OnDestroy()
@@ -55,6 +58,8 @@ namespace MillenniumImpression.TapeScene
         public void OnMachineClose()
         {
             nextButton.gameObject.SetActive(true);
+            foreach (ITapeEvent eventObject in eventObjects)
+                eventObject.OnMachineClose();
         }
     }
 }

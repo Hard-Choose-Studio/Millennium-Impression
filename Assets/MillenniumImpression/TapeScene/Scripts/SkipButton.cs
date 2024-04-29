@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace MillenniumImpression.ConcertScene
+namespace MillenniumImpression.TapeScene
 {
     public class SkipButton : GenericButton
     {

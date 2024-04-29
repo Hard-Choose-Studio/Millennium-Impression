@@ -1,9 +1,11 @@
 using UnityEngine;
 
-namespace MillenniumImpression.ConcertScene
+namespace MillenniumImpression.TapeScene
 {
-    public class MusicPlayer : MonoBehaviour, IConcertEvent
+    public class MusicPlayer : MonoBehaviour, ITapeEvent
     {
+        [SerializeField]
+        private Tape tape;
         [SerializeField]
         private AudioClip[] music;
         [SerializeField]
@@ -32,20 +34,32 @@ namespace MillenniumImpression.ConcertScene
 
         private void Update()
         {
-            if (found && !audioSource.isPlaying)
+            if (found && tape.touchedMachine && !audioSource.isPlaying)
                 ChangeSong(false);
         }
 
         public void OnTargetFound()
         {
             found = true;
-            audioSource.Play();
+            if (tape.touchedMachine)
+                audioSource.Play();
+            else
+                gameObject.SetActive(false);
         }
 
         public void OnTargetLost()
         {
             found = false;
-            audioSource.Stop();
+            if (tape.touchedMachine)
+                audioSource.Stop();
+        }
+
+        public void OnTapeReachedMachine() { }
+
+        public void OnMachineClose()
+        {
+            gameObject.SetActive(true);
+            audioSource.Play();
         }
 
         public void ChangeSong(bool previous)

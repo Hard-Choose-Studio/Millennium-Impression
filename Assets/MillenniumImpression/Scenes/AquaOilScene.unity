@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de470f2d47652554ca2c0542f406f79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: WataliScene
+  targetScene: 2
   transitionImage: {fileID: 1671601393}
 --- !u!114 &1718623651
 MonoBehaviour:

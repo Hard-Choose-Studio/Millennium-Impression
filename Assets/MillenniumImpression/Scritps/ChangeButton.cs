@@ -8,20 +8,21 @@ namespace MillenniumImpression
     public class ChangeButton : GenericButton
     {
         [SerializeField]
-        private string targetScene;
+        private Scenes targetScene;
         [SerializeField]
         private RawImage transitionImage;
 
         public override void OnClick()
         {
             button.enabled = false;
+            StoryData.nextScene = targetScene;
             StartCoroutine(LoadSceneTransition());
         }
 
         private IEnumerator LoadSceneTransition()
         {
             yield return null;
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(targetScene);
+            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("StoryScene");
             while (!asyncOperation.isDone)
             {
                 Color newColor = transitionImage.color;

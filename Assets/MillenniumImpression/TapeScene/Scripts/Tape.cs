@@ -65,12 +65,16 @@ namespace MillenniumImpression.TapeScene
 
         public void OnTargetFound()
         {
+            if (touchedMachine)
+                return;
             updateAction = moveAction;
             transform.SetLocalPositionAndRotation(originPosition, originRotation);
         }
 
         public void OnTargetLost()
         {
+            if (touchedMachine)
+                return;
             updateAction = GenericGameManager.EMPTY_ACTION;
             transform.SetLocalPositionAndRotation(originPosition, originRotation);
         }
@@ -80,5 +84,7 @@ namespace MillenniumImpression.TapeScene
             updateAction = GenericGameManager.EMPTY_ACTION;
             transform.SetLocalPositionAndRotation(new(0.2707F, -0.0171F, 0.0637F), Quaternion.Euler(0, -110, 90));
         }
+
+        public void OnMachineClose() { }
     }
 }
