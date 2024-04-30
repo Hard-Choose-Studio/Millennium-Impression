@@ -2,9 +2,10 @@ namespace MillenniumImpression
 {
     public enum Scenes
     {
-        AquaOilScene,
         PonkyScene,
+        AquaOilScene,
         TapeScene,
+        ForumScene,
         WataliScene
     }
 }

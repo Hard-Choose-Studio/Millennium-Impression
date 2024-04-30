@@ -15,14 +15,13 @@ namespace MillenniumImpression
         public override void OnClick()
         {
             button.enabled = false;
-            StoryData.nextScene = targetScene;
             StartCoroutine(LoadSceneTransition());
         }
 
         private IEnumerator LoadSceneTransition()
         {
             yield return null;
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("StoryScene");
+            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(targetScene.ToString());
             while (!asyncOperation.isDone)
             {
                 Color newColor = transitionImage.color;

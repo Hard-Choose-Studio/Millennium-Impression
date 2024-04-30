@@ -7,12 +7,12 @@ namespace MillenniumImpression.PonkyScene
         [SerializeField]
         private Sprite[] sprites;
 
-        private HasSpriteRenderer hasSpriteRenderer;
+        private SpriteRenderer spriteRenderer;
         private Rigidbody2D rb2D;
 
         private void Awake()
         {
-            hasSpriteRenderer = GetComponent<HasSpriteRenderer>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             rb2D = GetComponent<Rigidbody2D>();
             ResetObject();
         }
@@ -27,7 +27,7 @@ namespace MillenniumImpression.PonkyScene
         {
             transform.localPosition = new(Random.Range(-10.0F, 10.0F), Random.Range(5.0F, 10.0F), 0.0F);
             rb2D.velocity = Vector3.zero;
-            hasSpriteRenderer.ChangeSprite(sprites[Random.Range(0, sprites.Length)]); //隨機換材質
+            spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)]; //隨機換材質
         }
     }
 }

@@ -14,8 +14,9 @@ namespace MillenniumImpression.WataliScene
 
         private readonly IWataliEvent[] evnetObjects = new IWataliEvent[2];
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             instance = this;
 
             evnetObjects[0] = yvon;
@@ -29,23 +30,20 @@ namespace MillenniumImpression.WataliScene
 
         public override void OnTargetFound()
         {
-            hintText.gameObject.SetActive(false);
+            base.OnTargetFound();
             foreach (IWataliEvent e in evnetObjects)
                 e.OnTargetFound();
         }
 
         public override void OnTargetLost()
         {
-            if (hintText != null)
-                hintText.gameObject.SetActive(true);
-            if (nextButton != null)
-                nextButton.gameObject.SetActive(false);
             foreach (IWataliEvent e in evnetObjects)
                 e.OnTargetLost();
         }
 
         public void OnGood()
         {
+            TellAfterStory();
             foreach (IWataliEvent e in evnetObjects)
                 e.OnGood();
         }

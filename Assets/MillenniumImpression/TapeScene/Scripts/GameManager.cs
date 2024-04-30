@@ -11,6 +11,8 @@ namespace MillenniumImpression.TapeScene
         [SerializeField]
         private CassetteMachineDoor cassetteMachineDoor;
         [SerializeField]
+        private GameObject instructmentsCanvas;
+        [SerializeField]
         private MusicPlayer musicPlayer;
 
         [SerializeField]
@@ -18,8 +20,10 @@ namespace MillenniumImpression.TapeScene
 
         private readonly ITapeEvent[] eventObjects = new ITapeEvent[3];
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             instance = this;
             eventObjects[0] = tape;
             eventObjects[1] = cassetteMachineDoor;
@@ -33,9 +37,10 @@ namespace MillenniumImpression.TapeScene
 
         public override void OnTargetFound()
         {
+            base.OnTargetFound();
             if (tape.touchedMachine) //已經碰過了 就無所謂了
                 return;
-            hintText.gameObject.SetActive(false);
+            instructmentsCanvas.SetActive(false); //本來是true 讓他們可以先播放 做為緩衝
             foreach (ITapeEvent eventObject in eventObjects)
                 eventObject.OnTargetFound();
         }
@@ -57,7 +62,8 @@ namespace MillenniumImpression.TapeScene
 
         public void OnMachineClose()
         {
-            nextButton.gameObject.SetActive(true);
+            TellAfterStory();
+            instructmentsCanvas.SetActive(true);
             foreach (ITapeEvent eventObject in eventObjects)
                 eventObject.OnMachineClose();
         }

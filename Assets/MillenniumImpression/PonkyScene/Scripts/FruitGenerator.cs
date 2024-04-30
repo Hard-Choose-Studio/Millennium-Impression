@@ -14,6 +14,7 @@ namespace MillenniumImpression.PonkyScene
         {
             for (uint i = 0; i < FRUITS_COUNT; i++)
                 fruitPrefabs[i] = Instantiate(fruitPrefab, transform); //事先建立好
+            OnTargetLost();
         }
 
         public void OnTargetFound()

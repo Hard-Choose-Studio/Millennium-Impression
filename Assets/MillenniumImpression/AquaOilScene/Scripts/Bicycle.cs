@@ -13,13 +13,13 @@ namespace MillenniumImpression.AquaOilScene
             hasFoundLost.AddAnimationEvent("end_ride", () => hasVideoPlayer.GetVideoPlayer().Pause());
 
             hasVideoPlayer = GetComponent<HasVideoPlayer>();
+            hasVideoPlayer.ClearRenderTexture();
         }
 
         public void OnTargetFound()
         {
             hasFoundLost.SetTargetFound();
 
-            hasVideoPlayer.ClearRenderTexture();
             hasVideoPlayer.Play();
         }
 

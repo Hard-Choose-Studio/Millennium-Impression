@@ -15,7 +15,7 @@ namespace MillenniumImpression.AquaOilScene
             hasVideoPlayer = GetComponent<HasVideoPlayer>();
             playingAction = () =>
             {
-                if (hasVideoPlayer.GetVideoPlayer().frame == 59L) //在第2秒11影格的時候開啟 48 + 11 = 59
+                if (hasVideoPlayer.GetVideoPlayer().frame == 58L) //在第2秒11影格的時候開啟 48 + 11 = 59
                     GameManager.instance.OnBottleOpened();
             };
         }

@@ -9,21 +9,24 @@ namespace MillenniumImpression.AquaOilScene
         private void Awake()
         {
             hasVideoPlayer = GetComponent<HasVideoPlayer>();
+            hasVideoPlayer.ClearRenderTexture();
         }
 
         public void OnTargetFound()
         {
             hasVideoPlayer.Stop();
+            gameObject.SetActive(false);
         }
 
         public void OnTargetLost()
         {
             hasVideoPlayer.Stop();
+            gameObject.SetActive(false);
         }
 
         public void OnBottleOpened()
         {
-            hasVideoPlayer.ClearRenderTexture();
+            gameObject.SetActive(true);
             hasVideoPlayer.Play();
         }
     }
