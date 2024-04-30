@@ -15,9 +15,8 @@ namespace MillenniumImpression.AquaOilScene
 
         private readonly IAquaOilEvent[] eventObjects = new IAquaOilEvent[3];
 
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();
             instance = this;
 
             eventObjects[0] = aquaOil;
@@ -45,9 +44,9 @@ namespace MillenniumImpression.AquaOilScene
 
         public void OnBottleOpened()
         {
-            TellAfterStory();
             foreach (IAquaOilEvent e in eventObjects)
                 e.OnBottleOpened();
+            OnSceneFinish();
         }
     }
 }

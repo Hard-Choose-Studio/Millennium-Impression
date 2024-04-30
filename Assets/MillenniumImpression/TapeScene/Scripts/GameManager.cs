@@ -20,11 +20,10 @@ namespace MillenniumImpression.TapeScene
 
         private readonly ITapeEvent[] eventObjects = new ITapeEvent[3];
 
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();
-
             instance = this;
+
             eventObjects[0] = tape;
             eventObjects[1] = cassetteMachineDoor;
             eventObjects[2] = musicPlayer;
@@ -62,10 +61,10 @@ namespace MillenniumImpression.TapeScene
 
         public void OnMachineClose()
         {
-            TellAfterStory();
             instructmentsCanvas.SetActive(true);
             foreach (ITapeEvent eventObject in eventObjects)
                 eventObject.OnMachineClose();
+            OnSceneFinish();
         }
     }
 }

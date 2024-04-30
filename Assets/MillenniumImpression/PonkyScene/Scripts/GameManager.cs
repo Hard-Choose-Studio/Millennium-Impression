@@ -13,9 +13,8 @@ namespace MillenniumImpression.PonkyScene
 
         private readonly IPonkyEvent[] eventObjects = new IPonkyEvent[2];
 
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();
             instance = this;
             eventObjects[0] = sportCar;
             eventObjects[1] = fruitGenerator;
@@ -35,16 +34,16 @@ namespace MillenniumImpression.PonkyScene
 
         public override void OnTargetLost()
         {
+            base.OnTargetLost();
             foreach (IPonkyEvent eventObject in eventObjects)
                 eventObject.OnTargetLost();
         }
 
         public void OnCarStopDrive()
         {
-            afterStory.gameObject.SetActive(true);
-            StartCoroutine(afterStory.StoryTeller());
             foreach (IPonkyEvent eventObject in eventObjects)
                 eventObject.OnCarStopDrive();
+            OnSceneFinish();
         }
     }
 }

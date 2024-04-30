@@ -8,55 +8,39 @@ namespace MillenniumImpression
         public static readonly Action EMPTY_ACTION = () => { };
 
         [SerializeField]
-        protected HintText hintText;
+        protected GameObject hintText;
         [SerializeField]
-        protected GameObject sceneTarget;
+        protected string[] nextStory;
         [SerializeField]
-        protected StoryText beforeStory;
-        [SerializeField]
-        protected StoryText afterStory;
+        protected Scenes nextScene;
         [SerializeField]
         protected ChangeButton nextButton;
 
-        protected virtual void Awake()
-        {
-            sceneTarget.SetActive(false);
-
-            beforeStory.gameObject.SetActive(true);
-            beforeStory.storyEnd = () => BeforeStoryEnd();
-
-            afterStory.gameObject.SetActive(false);
-            afterStory.storyEnd = () => AfterStoryEnd();
-
-            nextButton.gameObject.SetActive(false);
-        }
-
-        protected virtual void Start()
-        {
-            StartCoroutine(beforeStory.StoryTeller());
-        }
+        private bool isFinished = false;
 
         public virtual void OnTargetFound()
         {
-            beforeStory.gameObject.SetActive(false);
+            if (!isFinished)
+                hintText.SetActive(false);
         }
 
-        public virtual void OnTargetLost() { }
-
-        public virtual void BeforeStoryEnd()
+        public virtual void OnTargetLost()
         {
-            sceneTarget.SetActive(true);
+            if (!isFinished)
+                hintText.SetActive(true);
         }
 
-        public virtual void AfterStoryEnd()
+        protected virtual void OnSceneFinish()
         {
+            isFinished = true;
+            ShowNextButton();
+        }
+
+        private void ShowNextButton()
+        {
+            StoryScene.StoryScene.SetStory(nextStory);
+            StoryScene.StoryScene.SetTargetScene(nextScene);
             nextButton.gameObject.SetActive(true);
-        }
-
-        protected void TellAfterStory()
-        {
-            afterStory.gameObject.SetActive(true);
-            StartCoroutine(afterStory.StoryTeller());
         }
     }
 }
