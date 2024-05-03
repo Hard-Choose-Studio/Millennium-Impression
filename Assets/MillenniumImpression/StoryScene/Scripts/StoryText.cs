@@ -22,7 +22,7 @@ namespace MillenniumImpression.StoryScene
         private IEnumerator StoryTeller()
         {
             StringBuilder builder = new();
-            foreach (char c in string.Join('\n', StoryScene.story))
+            foreach (char c in string.Join('\n', StoryData.story))
             {
                 text.text = builder.Append(c).ToString();
                 yield return new WaitForSeconds(0.1F);

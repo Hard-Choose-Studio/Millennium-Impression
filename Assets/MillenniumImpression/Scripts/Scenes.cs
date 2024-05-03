@@ -6,7 +6,7 @@ namespace MillenniumImpression
         PonkyScene,
         AquaOilScene,
         TapeScene,
-        ForumScene,
+        MessengerScene,
         WataliScene
     }
 }

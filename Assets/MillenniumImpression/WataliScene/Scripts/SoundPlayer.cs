@@ -6,20 +6,20 @@ namespace MillenniumImpression.WataliScene
     public class SoundPlayer : MonoBehaviour, IWataliEvent
     {
         private AudioSource audioSource;
-        private IEnumerator playAudio;
+        private Coroutine playAudio;
 
         private void Awake()
         {
             audioSource = GetComponent<AudioSource>();
-            playAudio = PlayAudio();
         }
         public void OnTargetFound()
         {
-            StartCoroutine(playAudio); //開始播放音訊
+            playAudio = StartCoroutine(PlayAudio()); //開始播放音訊
         }
         public void OnTargetLost()
         {
-            StopCoroutine(playAudio); //停止播放音訊
+            if (playAudio != null)
+                StopCoroutine(playAudio); //停止播放音訊
             audioSource.Stop();
         }
 

@@ -15,6 +15,8 @@ namespace MillenniumImpression.AquaOilScene
 
         private readonly IAquaOilEvent[] eventObjects = new IAquaOilEvent[3];
 
+        private bool vanishing = false;
+
         private void Awake()
         {
             instance = this;
@@ -31,6 +33,8 @@ namespace MillenniumImpression.AquaOilScene
 
         public override void OnTargetFound()
         {
+            if (vanishing) //正在消失
+                return; //不執行了
             base.OnTargetFound();
             foreach (IAquaOilEvent e in eventObjects)
                 e.OnTargetFound();
@@ -38,6 +42,8 @@ namespace MillenniumImpression.AquaOilScene
 
         public override void OnTargetLost()
         {
+            if (vanishing) //正在消失
+                return; //不執行了
             foreach (IAquaOilEvent e in eventObjects)
                 e.OnTargetLost();
         }
@@ -46,6 +52,12 @@ namespace MillenniumImpression.AquaOilScene
         {
             foreach (IAquaOilEvent e in eventObjects)
                 e.OnBottleOpened();
+        }
+
+        public void OnVanishing()
+        {
+            foreach (IAquaOilEvent e in eventObjects)
+                e.OnVanishing();
             OnSceneFinish();
         }
     }

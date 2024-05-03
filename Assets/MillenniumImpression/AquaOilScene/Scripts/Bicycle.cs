@@ -6,13 +6,20 @@ namespace MillenniumImpression.AquaOilScene
     {
         private HasFoundLost hasFoundLost;
         private HasVideoPlayer hasVideoPlayer;
+        private HasRawImage hasRawImage;
 
         private void Awake()
         {
             hasFoundLost = GetComponent<HasFoundLost>();
-            hasFoundLost.AddAnimationEvent("end_ride", () => hasVideoPlayer.GetVideoPlayer().Pause());
+            hasFoundLost.AddAnimationEvent("end_ride", () => GameManager.instance.OnVanishing());
 
             hasVideoPlayer = GetComponent<HasVideoPlayer>();
+
+            hasRawImage = GetComponent<HasRawImage>();
+        }
+
+        private void Start()
+        {
             hasVideoPlayer.ClearRenderTexture();
         }
 
@@ -31,5 +38,10 @@ namespace MillenniumImpression.AquaOilScene
         }
 
         public void OnBottleOpened() { }
+
+        public void OnVanishing()
+        {
+            hasRawImage.FadeOut();
+        }
     }
 }

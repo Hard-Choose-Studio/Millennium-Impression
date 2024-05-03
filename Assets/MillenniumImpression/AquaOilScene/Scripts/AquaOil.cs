@@ -6,6 +6,7 @@ namespace MillenniumImpression.AquaOilScene
     public class AquaOil : MonoBehaviour, IAquaOilEvent
     {
         private HasVideoPlayer hasVideoPlayer;
+        private HasRawImage hasRawImage;
 
         private Action updateAction;
         private Action playingAction;
@@ -13,6 +14,9 @@ namespace MillenniumImpression.AquaOilScene
         private void Awake()
         {
             hasVideoPlayer = GetComponent<HasVideoPlayer>();
+
+            hasRawImage = GetComponent<HasRawImage>();
+
             playingAction = () =>
             {
                 if (hasVideoPlayer.GetVideoPlayer().frame == 58L) //在第2秒11影格的時候開啟 48 + 11 = 59
@@ -42,6 +46,11 @@ namespace MillenniumImpression.AquaOilScene
         {
             updateAction = GenericGameManager.EMPTY_ACTION;
             hasVideoPlayer.GetVideoPlayer().Pause();
+        }
+
+        public void OnVanishing()
+        {
+            hasRawImage.FadeOut();
         }
     }
 }

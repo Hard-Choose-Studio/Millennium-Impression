@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &492843130
 RectTransform:
   m_ObjectHideFlags: 0
@@ -447,9 +447,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 298630379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -700}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 400}
   m_SizeDelta: {x: 800, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492843131
@@ -474,16 +474,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2d6db2c180e21874489697006f0edd5f, type: 3}
-    m_FontSize: 36
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 72
+    m_MaxSize: 73
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\u8ACB\u627E\u5230 \u5361\u5E36\u6A5F"
 --- !u!222 &492843132
@@ -815,7 +815,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2d6db2c180e21874489697006f0edd5f, type: 3}
-    m_FontSize: 36
+    m_FontSize: 72
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -824,7 +824,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\u7E7C\u7E8C"
 --- !u!222 &798987857
@@ -904,9 +904,9 @@ RectTransform:
   - {fileID: 798987855}
   m_Father: {fileID: 298630379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: -700}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 400, y: 400}
   m_SizeDelta: {x: 160, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976475323
@@ -2429,8 +2429,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hintText: {fileID: 492843129}
-  nextStory: []
-  nextScene: 0
+  nextStory:
+  - "\u300C\u53EE\u549A\uFF0C\u6709\u4EBA\u5728\u5BB6\u55CE\uFF5E\u300D"
+  - "\u5728\u5373\u6642\u901A\u4E0A\u6572\u6572\u597D\u53CB\uFF0C"
+  - "\u662F\u6211\u9592\u6687\u6642\u6700\u559C\u6B61\u505A\u7684\u4E8B\uFF0C"
+  - "\u96D6\u7136\u804A\u7684\u53EF\u80FD\u90FD\u662F\u4E9B\u6C92\u4EC0\u9EBC\u71DF\u990A\u7684\u5C0F\u4E8B\uFF0C"
+  - "\u537B\u7D93\u5E38\u8B93\u6211\u5011"
+  - "\u4E0D\u77E5\u4E0D\u89BA\u82B1\u4E86\u5927\u628A\u7684\u6642\u9593\u5728\u9019\u4E0A\u9762\u3002"
+  nextScene: 4
   nextButton: {fileID: 976475326}
   tape: {fileID: 919132148632339527}
   cassetteMachineDoor: {fileID: 8604882205874317001}

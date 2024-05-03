@@ -43,6 +43,7 @@ namespace MillenniumImpression.WataliScene
 
         public void OnGood()
         {
+            Debug.Log("OnGood");
             foreach (IWataliEvent e in evnetObjects)
                 e.OnGood();
             OnSceneFinish();
