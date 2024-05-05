@@ -10,6 +10,8 @@ namespace MillenniumImpression.PonkyScene
         private SportCar sportCar;
         [SerializeField]
         private FruitGenerator fruitGenerator;
+        [SerializeField]
+        private AudioSource ponkyAudio;
 
         private readonly IPonkyEvent[] eventObjects = new IPonkyEvent[2];
 
@@ -27,14 +29,20 @@ namespace MillenniumImpression.PonkyScene
 
         public override void OnTargetFound()
         {
+            if (isFinished)
+                return;
             base.OnTargetFound();
+            ponkyAudio.Play();
             foreach (IPonkyEvent eventObject in eventObjects)
                 eventObject.OnTargetFound();
         }
 
         public override void OnTargetLost()
         {
+            if (isFinished)
+                return;
             base.OnTargetLost();
+            ponkyAudio.Stop();
             foreach (IPonkyEvent eventObject in eventObjects)
                 eventObject.OnTargetLost();
         }

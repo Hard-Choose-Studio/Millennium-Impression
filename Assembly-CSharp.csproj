@@ -71,6 +71,7 @@
     <Compile Include="Assets\MillenniumImpression\WataliScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\Tape.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\IPonkyEvent.cs" />
+    <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\MessageParent.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\MessageChoose.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\HasComponent\HasAnimator.cs" />
     <Compile Include="Assets\MillenniumImpression\StoryScene\Scripts\StoryData.cs" />
@@ -82,7 +83,6 @@
     <Compile Include="Assets\MillenniumImpression\Scripts\GenericGameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\StoryScene\Scripts\GameManager.cs" />
-    <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\SendMessageText.cs" />
     <Compile Include="Assets\MillenniumImpression\StoryScene\Scripts\NextButton.cs" />
     <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\GameManager.cs" />
@@ -90,11 +90,12 @@
     <Compile Include="Assets\MillenniumImpression\Scripts\IEvent.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\ChangeButton.cs" />
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\GameManager.cs" />
-    <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\ReceivedMessageText.cs" />
+    <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\SendMessageParent.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\SkipButton.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\IMessengerEvent.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\Scenes.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\GameManager.cs" />
+    <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\ReceivedMessageParent.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\FruitGenerator.cs" />
     <Compile Include="Assets\MillenniumImpression\WataliScene\Scripts\IWataliEvent.cs" />
     <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\IAquaOilEvent.cs" />

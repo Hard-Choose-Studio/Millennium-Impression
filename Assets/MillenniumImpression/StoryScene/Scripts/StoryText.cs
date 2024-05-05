@@ -10,12 +10,12 @@ namespace MillenniumImpression.StoryScene
         private Text text;
 
         [SerializeField]
-        private GameObject nextButton;
+        private Button nextButton;
 
         private void Awake()
         {
             text = GetComponent<Text>();
-            nextButton.SetActive(false);
+            nextButton.enabled = false;
             StartCoroutine(StoryTeller());
         }
 
@@ -27,7 +27,7 @@ namespace MillenniumImpression.StoryScene
                 text.text = builder.Append(c).ToString();
                 yield return new WaitForSeconds(0.1F);
             }
-            nextButton.SetActive(true);
+            nextButton.enabled = true;
         }
     }
 }

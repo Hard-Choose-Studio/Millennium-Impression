@@ -1,15 +1,20 @@
+using UnityEngine;
+
 namespace MillenniumImpression.MessengerScene
 {
     public class MessageChoose : GenericButton, IMessengerEvent
     {
+        [SerializeField]
+        private int buttonIndex; //0或1
+
         private void Start()
         {
-            text.text = GameManager.instance.GetSendMessage();
+            text.text = GameManager.instance.GetSendMessage(buttonIndex);
         }
 
         public override void OnClick()
         {
-            GameManager.instance.OnMessageChoosed();
+            GameManager.instance.OnMessageChoosed(buttonIndex);
         }
 
         public void OnTargetFound() { }
@@ -18,13 +23,13 @@ namespace MillenniumImpression.MessengerScene
 
         public void OnMessageReceived()
         {
-            button.enabled = true;
-            text.text = GameManager.instance.GetSendMessage();
+            button.enabled = true; //開放選擇
+            text.text = GameManager.instance.GetSendMessage(buttonIndex);
         }
 
         public void OnMessageChoosed()
         {
-            button.enabled = false;
+            button.enabled = false; //結束選擇
             text.text = string.Empty;
         }
 

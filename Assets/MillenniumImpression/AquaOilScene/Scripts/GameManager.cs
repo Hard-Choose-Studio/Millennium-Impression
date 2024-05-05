@@ -13,6 +13,8 @@ namespace MillenniumImpression.AquaOilScene
         private Smoke smoke;
         [SerializeField]
         private Bicycle bicycle;
+        [SerializeField]
+        private AudioSource aquaOilAudio;
 
         private readonly IAquaOilEvent[] eventObjects = new IAquaOilEvent[3];
 
@@ -37,6 +39,7 @@ namespace MillenniumImpression.AquaOilScene
             if (vanishing) //正在消失
                 return; //不執行了
             base.OnTargetFound();
+            aquaOilAudio.Play();
             foreach (IAquaOilEvent e in eventObjects)
                 e.OnTargetFound();
         }
@@ -45,6 +48,7 @@ namespace MillenniumImpression.AquaOilScene
         {
             if (vanishing) //正在消失
                 return; //不執行了
+            aquaOilAudio.Stop();
             foreach (IAquaOilEvent e in eventObjects)
                 e.OnTargetLost();
         }

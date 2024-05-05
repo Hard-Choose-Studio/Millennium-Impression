@@ -500,7 +500,7 @@ MonoBehaviour:
   - "\u96A8\u8457\u77E5\u8B58\u8D77\u821E\u3002"
   nextScene: 3
   nextButton: {fileID: 143978508}
-  yvon: {fileID: 684312411}
+  yvon: {fileID: 684312413}
   soundPlayer: {fileID: 1173488408}
 --- !u!1 &386665710
 GameObject:
@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 684312408}
   - component: {fileID: 684312410}
   - component: {fileID: 684312412}
-  - component: {fileID: 684312411}
+  - component: {fileID: 684312413}
   m_Layer: 5
   m_Name: Yvon
   m_TagString: Untagged
@@ -829,20 +829,6 @@ VideoPlayer:
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
---- !u!114 &684312411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684312406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab17ac9840cee9b499b7419d2b876f10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionVideo: {fileID: 32900000, guid: 735ac74c1b5e1ea4d93a7b8f963cda80, type: 3}
-  goodVideo: {fileID: 32900000, guid: b0cecc46285841d44a14f090c7ac6513, type: 3}
 --- !u!114 &684312412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,6 +839,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6532f40e58cf09646885b82a87aa5e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &684312413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684312406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed03c08e9895c5439c4409c9d287d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &891109714
@@ -1392,7 +1390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u8ACB\u627E\u5230 \u5582\u5927\u529B"
+  m_Text: "\u8ACB\u627E\u5230\u5582\u5927\u529B\u4E26\u6383\u63CF\u4E92\u52D5"
 --- !u!222 &2008134919
 CanvasRenderer:
   m_ObjectHideFlags: 0

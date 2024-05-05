@@ -29,6 +29,8 @@ namespace MillenniumImpression.WataliScene
 
         public override void OnTargetFound()
         {
+            if (isFinished)
+                return;
             base.OnTargetFound();
             foreach (IWataliEvent e in evnetObjects)
                 e.OnTargetFound();
@@ -36,6 +38,8 @@ namespace MillenniumImpression.WataliScene
 
         public override void OnTargetLost()
         {
+            if (isFinished)
+                return;
             base.OnTargetLost();
             foreach (IWataliEvent e in evnetObjects)
                 e.OnTargetLost();
@@ -43,7 +47,6 @@ namespace MillenniumImpression.WataliScene
 
         public void OnGood()
         {
-            Debug.Log("OnGood");
             foreach (IWataliEvent e in evnetObjects)
                 e.OnGood();
             OnSceneFinish();

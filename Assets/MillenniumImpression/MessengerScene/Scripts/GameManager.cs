@@ -9,43 +9,61 @@ namespace MillenniumImpression.MessengerScene
         [SerializeField]
         private MessengerInputField messengerInputField;
         [SerializeField]
-        private MessageChoose messageChooseButton;
+        private MessageChoose messageChooseButton1;
+        [SerializeField]
+        private MessageChoose messageChooseButton2;
 
         [SerializeField]
-        private ReceivedMessageText[] receivedMessageTexts;
+        private ReceivedMessageParent[] receivedMessageTexts;
         [SerializeField]
-        private SendMessageText[] sendMessageTexts;
+        private SendMessageParent[] sendMessageTexts;
 
-        private readonly IMessengerEvent[] eventObjects = new IMessengerEvent[2];
+        private readonly IMessengerEvent[] eventObjects = new IMessengerEvent[3];
 
         private int messageIndex = 0;
 
         private readonly string[] receivedMessages =
         {
-            "叮咚，有人在家嗎~~~~",
+            "安安 你好 幾歲 住哪",
             "考試終於考完了= =",
-            "那明天下課後要去哪？",
+            "那ㄋ明天下課後要去哪？",
             "要記得帶條芥末XD"
         };
 
-        private readonly string[] sendMessages =
+        private int chosenMessage = 0;
+        private readonly string[,] sendMessages =
         {
-            "白癡喔，當然在啊~",
-            "這次的數學有夠難Orz",
-            "我要去網咖打世紀帝國^_^",
-            "我知道，因為是芥末日嘛！"
+            {
+                "你真的很米苔目XDD",
+                "白癡喔XDD"
+            },
+            {
+                "哇哩勒，這次的數學有夠難",
+                "對ㄚ，題目超難ㄉOrz"
+            },
+            {
+                "我要去網咖打世紀帝國^_^",
+                "跟我麻吉去夾娃娃吧！"
+            },
+            {
+                "我知道，因為是芥末日嘛！",
+                "哈哈明天放學就去買"
+            }
         };
 
         public string GetReceivedMessage() => receivedMessages[messageIndex];
 
-        public string GetSendMessage() => sendMessages[messageIndex];
+        public string GetSendMessage(int chosenMessage) => sendMessages[messageIndex, chosenMessage];
+
+        public string GetSendMessage() => sendMessages[messageIndex, chosenMessage];
 
         private void Awake()
         {
             instance = this;
 
             eventObjects[0] = messengerInputField;
-            eventObjects[1] = messageChooseButton;
+            eventObjects[1] = messageChooseButton1;
+            eventObjects[2] = messageChooseButton2;
         }
 
         private void OnDestroy()
@@ -76,6 +94,12 @@ namespace MillenniumImpression.MessengerScene
         {
             foreach (IMessengerEvent eventObject in eventObjects)
                 eventObject.OnMessageReceived();
+        }
+
+        public void OnMessageChoosed(int which)
+        {
+            chosenMessage = which;
+            OnMessageChoosed();
         }
 
         public void OnMessageChoosed()
