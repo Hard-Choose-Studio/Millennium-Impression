@@ -16,7 +16,7 @@ namespace MillenniumImpression
         [SerializeField]
         protected ChangeButton nextButton;
 
-        private bool isFinished = false;
+        protected bool isFinished = false;
 
         public virtual void OnTargetFound()
         {

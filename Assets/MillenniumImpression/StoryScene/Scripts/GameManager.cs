@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace MillenniumImpression.StoryScene
 {
+    //TODO: ¹Ï¤ù²H¤J
     public class GameManager : MonoBehaviour
     {
         public static GameManager instance;

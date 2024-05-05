@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="Watali" size="0.500000 0.528351" />
+    <ImageTarget name="Ponky" size="0.800000 0.342675" />
+    <ImageTarget name="Aqua-Oil" size="0.600000 0.600000" />
+    <ImageTarget name="Yahoo-Messenger" size="0.800000 0.666983" />
+  </Tracking>
+</QCARConfig>

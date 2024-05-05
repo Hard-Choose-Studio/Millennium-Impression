@@ -7,7 +7,7 @@ namespace MillenniumImpression.GameScene
 {
     public class Mary : MonoBehaviour
     {
-        private bool isOnGround = false;
+        /*private bool isOnGround = false;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -19,6 +19,6 @@ namespace MillenniumImpression.GameScene
         {
             if (collision.gameObject.CompareTag("ground"))
                 isOnGround = false;
-        }
+        }*/
     }
 }

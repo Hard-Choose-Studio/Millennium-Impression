@@ -1210,14 +1210,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Aqua Oil
+  mTrackableName: Aqua-Oil
   mInitializedInEditor: 1
-  mDataSetPath: 
+  mDataSetPath: Vuforia/Millennium-Impression.xml
   mAspectRatio: 1
-  mImageTargetType: 3
-  mWidth: 0.2
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 99f0651cfc9cf7a4d8eec2ad275ce1f3, type: 3}
+  mImageTargetType: 0
+  mWidth: 0.6
+  mHeight: 0.6
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1252,8 +1252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1246559140}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Aqua Oil
-  mDatasetName: 
+  mTargetName: Aqua-Oil
+  mDatasetName: Vuforia/Millennium-Impression.xml
   mCastedBehaviour: {fileID: 1246559140}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}

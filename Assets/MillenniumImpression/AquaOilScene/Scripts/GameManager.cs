@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace MillenniumImpression.AquaOilScene
 {
+    //TODO: 先跑完瓶子 再跑腳踏車
     public class GameManager : GenericGameManager, IAquaOilEvent
     {
         public static GameManager instance;
@@ -58,6 +59,7 @@ namespace MillenniumImpression.AquaOilScene
         {
             foreach (IAquaOilEvent e in eventObjects)
                 e.OnVanishing();
+            vanishing = true;
             OnSceneFinish();
         }
     }

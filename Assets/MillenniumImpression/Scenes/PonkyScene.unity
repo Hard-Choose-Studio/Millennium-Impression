@@ -863,14 +863,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: peach
+  mTrackableName: Ponky
   mInitializedInEditor: 1
-  mDataSetPath: 
-  mAspectRatio: 2.3345726
-  mImageTargetType: 3
-  mWidth: 0.08566879
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: e9522262ff0ee7546ab62566d74a89ea, type: 3}
+  mDataSetPath: Vuforia/Millennium-Impression.xml
+  mAspectRatio: 0.42834374
+  mImageTargetType: 0
+  mWidth: 0.8
+  mHeight: 0.342675
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -905,8 +905,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1180333934}
   mHiddenRoot: {fileID: 0}
-  mTargetName: peach
-  mDatasetName: 
+  mTargetName: Ponky
+  mDatasetName: Vuforia/Millennium-Impression.xml
   mCastedBehaviour: {fileID: 1180333934}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -950,7 +950,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.1416, y: 0.0944}
+  m_SizeDelta: {x: 0.2832, y: 0.1888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594195344
 MonoBehaviour:
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
