@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace MillenniumImpression
 {
+    [RequireComponent(typeof(Animator))]
     public class HasAnimator : MonoBehaviour
     {
         protected Animator animator;

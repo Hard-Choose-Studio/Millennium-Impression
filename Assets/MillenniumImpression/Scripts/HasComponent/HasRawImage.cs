@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 namespace MillenniumImpression
 {
+    [RequireComponent(typeof(RawImage))]
     public class HasRawImage : MonoBehaviour
     {
         private RawImage rawImage;

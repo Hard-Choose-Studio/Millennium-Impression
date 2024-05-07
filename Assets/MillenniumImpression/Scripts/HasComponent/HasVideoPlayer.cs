@@ -3,6 +3,7 @@ using UnityEngine.Video;
 
 namespace MillenniumImpression
 {
+    [RequireComponent(typeof(VideoPlayer))]
     public class HasVideoPlayer : MonoBehaviour
     {
         //VideoPlayer的包裹類別

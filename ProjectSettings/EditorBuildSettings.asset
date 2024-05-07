@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/MillenniumImpression/Scenes/GameScene.unity
+    guid: e7930cb3673b7f64e84c70f806022e1c
+  - enabled: 1
     path: Assets/MillenniumImpression/Scenes/StoryScene.unity
     guid: ec18256acd52b134d810d7c1df2681c4
   - enabled: 1
@@ -23,7 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MillenniumImpression/Scenes/WataliScene.unity
     guid: 354121ba485a11346a087fd5ac4a1690
-  - enabled: 1
-    path: Assets/MillenniumImpression/Scenes/GameScene.unity
-    guid: e7930cb3673b7f64e84c70f806022e1c
   m_configObjects: {}

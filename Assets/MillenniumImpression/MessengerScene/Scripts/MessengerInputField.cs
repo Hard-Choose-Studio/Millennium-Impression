@@ -7,6 +7,9 @@ namespace MillenniumImpression.MessengerScene
 {
     public class MessengerInputField : MonoBehaviour, IMessengerEvent
     {
+        [SerializeField]
+        private SendButton sendButton;
+
         private Text text;
         private bool pauseCoroutine = false;
 
@@ -45,7 +48,7 @@ namespace MillenniumImpression.MessengerScene
                 }
                 yield return new WaitForSeconds(0.1F);
             }
-            GameManager.instance.OnMessageSend();
+            sendButton.gameObject.SetActive(true);
         }
 
         public void OnMessageSend()

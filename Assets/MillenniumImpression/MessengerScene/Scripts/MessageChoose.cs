@@ -7,10 +7,10 @@ namespace MillenniumImpression.MessengerScene
         [SerializeField]
         private int buttonIndex; //0©Î1
 
-        private void Start()
+        /*private void Start()
         {
             text.text = GameManager.instance.GetSendMessage(buttonIndex);
-        }
+        }*/
 
         public override void OnClick()
         {
