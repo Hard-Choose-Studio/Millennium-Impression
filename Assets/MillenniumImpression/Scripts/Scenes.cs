@@ -7,6 +7,7 @@ namespace MillenniumImpression
         AquaOilScene,
         TapeScene,
         MessengerScene,
-        WataliScene
+        WataliScene,
+        TelevisionScene
     }
 }

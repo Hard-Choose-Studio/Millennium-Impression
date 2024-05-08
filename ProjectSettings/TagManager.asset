@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Enemy Top
   - Flower
+  - Fireball Target
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Fireball
   - 
   - 
   - 

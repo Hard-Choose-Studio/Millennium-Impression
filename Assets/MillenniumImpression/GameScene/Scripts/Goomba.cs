@@ -23,7 +23,7 @@ namespace MillenniumImpression.GameScene
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Ground"))
+            if (GameManager.instance.IsGround(collision.gameObject))
                 return;
             Vector3 newScale = transform.localScale;
             newScale.x = -newScale.x;

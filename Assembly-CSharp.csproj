@@ -78,13 +78,16 @@
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\MessageChoose.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\HasComponent\HasAnimator.cs" />
     <Compile Include="Assets\MillenniumImpression\StoryScene\Scripts\StoryData.cs" />
+    <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\Coin.cs" />
     <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\Smoke.cs" />
+    <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\IGameEvent.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\CassetteMachineDoor.cs" />
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\Mary.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\GenericButton.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\MessengerInputField.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\GenericGameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\ExclamationBrick.cs" />
+    <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\FireBall.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\StoryScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\StoryScene\Scripts\NextButton.cs" />
@@ -96,6 +99,7 @@
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\GameManager.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\SendMessageParent.cs" />
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\Goomba.cs" />
+    <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\FireballButton.cs" />
     <Compile Include="Assets\MillenniumImpression\TapeScene\Scripts\SkipButton.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\IMessengerEvent.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\Scenes.cs" />

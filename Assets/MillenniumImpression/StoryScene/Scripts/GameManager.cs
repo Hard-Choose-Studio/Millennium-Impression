@@ -16,6 +16,19 @@ namespace MillenniumImpression.StoryScene
         [SerializeField]
         private Text storyText;
 
+        [SerializeField]
+        private Sprite ponky;
+        [SerializeField]
+        private Sprite aquaOil;
+        [SerializeField]
+        private Sprite tape;
+        [SerializeField]
+        private Sprite messenger;
+        [SerializeField]
+        private Sprite watali;
+        [SerializeField]
+        private Sprite television;
+
         private readonly Graphic[] alphaNeedChange = new Graphic[3]; //Graphic是Image和Text共同的親類別 擁有color變數
 
         private void Awake()
@@ -35,6 +48,28 @@ namespace MillenniumImpression.StoryScene
 
         private void Start()
         {
+            switch (StoryData.targetScene)
+            {
+                case Scenes.PonkyScene:
+                    background.sprite = ponky;
+                    break;
+                case Scenes.AquaOilScene:
+                    background.sprite = aquaOil;
+                    break;
+                case Scenes.TapeScene:
+                    background.sprite = tape;
+                    break;
+                case Scenes.MessengerScene:
+                    background.sprite = messenger;
+                    break;
+                case Scenes.WataliScene:
+                    background.sprite = watali;
+                    break;
+                case Scenes.TelevisionScene:
+                    background.sprite = television;
+                    break;
+            }
+
             StartCoroutine(FadeIn());
         }
 

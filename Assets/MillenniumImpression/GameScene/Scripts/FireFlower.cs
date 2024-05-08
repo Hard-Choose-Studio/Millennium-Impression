@@ -15,7 +15,7 @@ namespace MillenniumImpression.GameScene
 
         private void Start()
         {
-            rb2D.AddForce(new(120, 120));
+            rb2D.AddForce(new(-120.0F, 120.0F)); //用負的就不用越過怪物
         }
     }
 }

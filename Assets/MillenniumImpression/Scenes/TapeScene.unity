@@ -202,7 +202,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1117,7 +1117,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1429,7 +1429,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1517,13 +1517,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tape: {fileID: 919132148632339527}
   music:
-  - {fileID: 8300000, guid: d7140ed7815374445a39108eede82027, type: 3}
-  - {fileID: 8300000, guid: 36396723d00d2bf49ab4359d42829e86, type: 3}
-  - {fileID: 8300000, guid: 32e650721243a894db4253baed78f748, type: 3}
-  - {fileID: 8300000, guid: a2740818b35f65541a005939a413e54c, type: 3}
-  - {fileID: 8300000, guid: 65a030f7a3164f147ab92d46dad8b83b, type: 3}
-  - {fileID: 8300000, guid: bfd8f361fea61d4429475f02fab6dfa0, type: 3}
-  instruments: []
+  - {fileID: 8300000, guid: 851f6ea7e089e724eae2f00364497e21, type: 3}
+  - {fileID: 8300000, guid: 772bc3efcd50fdb49a4eae689e446c5f, type: 3}
+  instruments:
+  - {fileID: 1252420487}
+  - {fileID: 1902198144}
+  - {fileID: 269971532}
+  - {fileID: 1933993093}
+  - {fileID: 1537898816}
 --- !u!82 &1562492501
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1961,7 +1962,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -2046,7 +2047,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 0

@@ -13,7 +13,7 @@ namespace MillenniumImpression.GameScene
         [SerializeField]
         private Sprite fadeBrick;
 
-        private bool bright;
+        private bool fade;
 
         private SpriteRenderer spriteRenderer;
 
@@ -25,18 +25,18 @@ namespace MillenniumImpression.GameScene
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (bright && collision.GetContact(0).normal.y > 0 && collision.gameObject.CompareTag("Player"))
-            {
-                Instantiate(containsItem, transform.TransformPoint(Vector3.up * 6), Quaternion.identity, transform.parent);
-                spriteRenderer.sprite = fadeBrick;
-                bright = false;
-            }
+            if (fade || collision.GetContact(0).normal.y <= 0 || !collision.gameObject.CompareTag("Player"))
+                return;
+            GameObject newObject = Instantiate(containsItem, transform.TransformPoint(Vector3.up * 10), Quaternion.identity, transform.parent);
+            GameManager.instance.AddResetGameObject(newObject);
+            spriteRenderer.sprite = fadeBrick;
+            fade = true;
         }
 
         public void ResetObject()
         {
             spriteRenderer.sprite = brightBrick;
-            bright = true;
+            fade = false;
         }
     }
 }
