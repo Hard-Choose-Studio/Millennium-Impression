@@ -77,6 +77,7 @@
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\MessageParent.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\MessageChoose.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\HasComponent\HasAnimator.cs" />
+    <Compile Include="Assets\MillenniumImpression\PreviouslyScene\Scripts\StartButton.cs" />
     <Compile Include="Assets\MillenniumImpression\StoryScene\Scripts\StoryData.cs" />
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\Coin.cs" />
     <Compile Include="Assets\MillenniumImpression\AquaOilScene\Scripts\Smoke.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\MillenniumImpression\Scripts\GenericButton.cs" />
     <Compile Include="Assets\MillenniumImpression\MessengerScene\Scripts\MessengerInputField.cs" />
     <Compile Include="Assets\MillenniumImpression\Scripts\GenericGameManager.cs" />
+    <Compile Include="Assets\MillenniumImpression\PreviouslyScene\Scripts\DelayShowButton.cs" />
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\ExclamationBrick.cs" />
     <Compile Include="Assets\MillenniumImpression\GameScene\Scripts\FireBall.cs" />
     <Compile Include="Assets\MillenniumImpression\PonkyScene\Scripts\GameManager.cs" />

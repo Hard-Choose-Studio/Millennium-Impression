@@ -2713,8 +2713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: {fileID: 298837009}
   nextStory:
-  - ...
-  nextScene: 0
+  - ... ...
+  nextScene: 7
   nextButton: {fileID: 299230075}
   messengerInputField: {fileID: 999181161}
   messageChooseButton1: {fileID: 1759986195}

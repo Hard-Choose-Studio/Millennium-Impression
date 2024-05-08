@@ -225,14 +225,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Mary Scene
+  mTrackableName: Game Boy
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 0.75
+  mAspectRatio: 1.3333334
   mImageTargetType: 3
-  mWidth: 20
-  mHeight: 15
-  mRuntimeTexture: {fileID: 2800000, guid: 22ddd5e8c76714845b044dcb30650564, type: 3}
+  mWidth: 15
+  mHeight: 20
+  mRuntimeTexture: {fileID: 2800000, guid: 762aa521cd7e09e42aec9e41d5680059, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 65827662}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Mary Scene
+  mTargetName: Game Boy
   mDatasetName: 
   mCastedBehaviour: {fileID: 65827662}
   mMeshFilter: {fileID: 0}
@@ -1914,8 +1914,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: {fileID: 413791473}
   nextStory:
-  - ...
-  nextScene: 0
+  - "\u300C\u8981\u4E0D\u8981\u559D\u7DAD\u5927\u529B\uFF1F\u300D"
+  - "\u300C\u7576\u7136\u8981\u4F86\u300D"
+  nextScene: 3
   nextButton: {fileID: 918077272}
   maryGame: {fileID: 199871318}
   mary: {fileID: 1778819608}
@@ -3202,8 +3203,8 @@ GameObject:
   - component: {fileID: 1778819606}
   - component: {fileID: 1778819609}
   - component: {fileID: 1778819611}
-  - component: {fileID: 1778819608}
   - component: {fileID: 1778819610}
+  - component: {fileID: 1778819608}
   m_Layer: 6
   m_Name: Mary
   m_TagString: Player

@@ -6,24 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MillenniumImpression/Scenes/GameScene.unity
-    guid: e7930cb3673b7f64e84c70f806022e1c
+    path: Assets/MillenniumImpression/Scenes/PreviouslyScene.unity
+    guid: 9692c94098c177848b75d7afd586013a
   - enabled: 1
     path: Assets/MillenniumImpression/Scenes/StoryScene.unity
     guid: ec18256acd52b134d810d7c1df2681c4
   - enabled: 1
+    path: Assets/MillenniumImpression/Scenes/TapeScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/MillenniumImpression/Scenes/GameScene.unity
+    guid: e7930cb3673b7f64e84c70f806022e1c
+  - enabled: 1
     path: Assets/MillenniumImpression/Scenes/PonkyScene.unity
     guid: c5a388468764379419f803b7f5eb4313
+  - enabled: 1
+    path: Assets/MillenniumImpression/Scenes/WataliScene.unity
+    guid: 354121ba485a11346a087fd5ac4a1690
   - enabled: 1
     path: Assets/MillenniumImpression/Scenes/AquaOilScene.unity
     guid: 2a3e62d9aa4502d4d88740c329381351
   - enabled: 1
-    path: Assets/MillenniumImpression/Scenes/TapeScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/MillenniumImpression/Scenes/MessengerScene.unity
     guid: 05a7f61b4529d2b48a56e18c74b44f38
   - enabled: 1
-    path: Assets/MillenniumImpression/Scenes/WataliScene.unity
-    guid: 354121ba485a11346a087fd5ac4a1690
+    path: Assets/MillenniumImpression/Scenes/TelevisionScene.unity
+    guid: bd2fccc8763128d44b3599b6b68b9193
   m_configObjects: {}

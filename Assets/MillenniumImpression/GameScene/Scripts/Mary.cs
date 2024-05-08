@@ -48,6 +48,10 @@ namespace MillenniumImpression.GameScene
             audioSource = GetComponent<AudioSource>();
 
             originalPosition = transform.localPosition;
+        }
+
+        private void Start() //裡面有用到hasFoundLost 然而無法確定誰先Awake
+        {
             ResetObject();
         }
 
