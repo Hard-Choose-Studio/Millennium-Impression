@@ -10,24 +10,24 @@ namespace MillenniumImpression.StoryScene
         private Text text;
 
         [SerializeField]
-        private Button nextButton;
+        private GameObject nextButton;
 
         private void Awake()
         {
             text = GetComponent<Text>();
-            nextButton.enabled = false;
             StartCoroutine(StoryTeller());
         }
 
         private IEnumerator StoryTeller()
         {
+            nextButton.SetActive(false);
             StringBuilder builder = new();
             foreach (char c in string.Join('\n', StoryData.story))
             {
                 text.text = builder.Append(c).ToString();
                 yield return new WaitForSeconds(0.1F);
             }
-            nextButton.enabled = true;
+            nextButton.SetActive(true);
         }
     }
 }

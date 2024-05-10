@@ -1058,9 +1058,9 @@ RectTransform:
   - {fileID: 787136362}
   m_Father: {fileID: 1207841600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: -300}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 400, y: 200}
   m_SizeDelta: {x: 160, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299230075
@@ -2713,8 +2713,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: {fileID: 298837009}
   nextStory:
-  - ... ...
-  nextScene: 7
+  - "\u300C\u4F86\u770B\u96FB\u8996\u5427\uFF01\u8981\u770B\u4E9B\u4EC0\u9EBC\uFF1F"
+  - "\u6211\u731C\uFF1F\u5A1B\u767E\uFF1F\u300D"
+  - "\u300C\u9019\u9EBC\u665A\u4E86\uFF0C\u61C9\u8A72\u6C92\u5F97\u770B\u4E86\u5427\uFF01\u300D"
+  - "\u300C\u554A\uFF0C\u90A3\u4F86\u770B\u9023\u7E8C\u5287\u5427\u3002\u300D"
+  nextScene: 8
   nextButton: {fileID: 299230075}
   messengerInputField: {fileID: 999181161}
   messageChooseButton1: {fileID: 1759986195}

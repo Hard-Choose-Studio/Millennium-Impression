@@ -14,6 +14,8 @@ namespace MillenniumImpression.GameScene
         [SerializeField]
         private Goomba goomba;
         [SerializeField]
+        private PiranhaPlant piranhaPlant;
+        [SerializeField]
         private ExclamationBrick brick1;
         [SerializeField]
         private ExclamationBrick brick2;
@@ -23,7 +25,7 @@ namespace MillenniumImpression.GameScene
         [SerializeField]
         private LayerMask groundLayer;
 
-        private readonly IResettable[] resetObjects = new IResettable[5];
+        private readonly IResettable[] resetObjects = new IResettable[6];
         private readonly HashSet<GameObject> destroyWhenReset = new();
 
         private AudioSource bgm;
@@ -34,9 +36,10 @@ namespace MillenniumImpression.GameScene
 
             resetObjects[0] = mary;
             resetObjects[1] = goomba;
-            resetObjects[2] = brick1;
-            resetObjects[3] = brick2;
-            resetObjects[4] = theEnd;
+            resetObjects[2] = piranhaPlant;
+            resetObjects[3] = brick1;
+            resetObjects[4] = brick2;
+            resetObjects[5] = theEnd;
 
             bgm = GetComponent<AudioSource>();
         }

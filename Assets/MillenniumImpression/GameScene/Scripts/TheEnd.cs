@@ -16,11 +16,12 @@ namespace MillenniumImpression.GameScene
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (touched)
+            if (touched || !collision.CompareTag("Player"))
                 return;
             touched = true;
             hasAnimator.SetAnimatorValue("theEnd");
-            collision.gameObject.SetActive(false);
+            if (collision.TryGetComponent(out SpriteRenderer spriteRenderer))
+                spriteRenderer.enabled = false;
         }
 
         public void ResetObject()

@@ -906,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 400, y: 200}
   m_SizeDelta: {x: 160, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976475323
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   - "\u300C\u597D\u5566\u597D\u5566\uFF0C\u7B49\u7B49\u518D\u8B93\u4F60\u73A9\u3002\u300D"
   - "\u300C\u53EF\u662F\u54E5\u4F60\u6BCF\u5929\u90FD\u9019\u6A23\u8AAA\uFF0C\u7D50\u679C\u6211\u90FD\u6C92\u73A9\u5230\uFF01\u300D"
   - "\u300C\u2026\u2026\u5225\u5435\uFF01\u6211\u6B63\u6253\u5230\u7CBE\u5F69\u7684\u90E8\u5206\u2026\u2026\u300D"
-  nextScene: 2
+  nextScene: 3
   nextButton: {fileID: 976475326}
   tape: {fileID: 919132148632339527}
   cassetteMachineDoor: {fileID: 8604882205874317001}

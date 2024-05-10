@@ -105,14 +105,17 @@ namespace MillenniumImpression.GameScene
         private void OnTriggerEnter2D(Collider2D collision)
         {
             GameObject obj = collision.gameObject;
-            if (!invicinble && obj.CompareTag("Enemy"))
-                Damage();
-            else if (obj.CompareTag("Enemy Top"))
-                obj.transform.parent.gameObject.SetActive(false);
-            else if (obj.CompareTag("Flower"))
+            if (obj.CompareTag("Flower"))
             {
                 Fire(true);
                 Destroy(obj);
+            }
+            else if (!invicinble)
+            {
+                if (obj.CompareTag("Enemy"))
+                    Damage();
+                else if (obj.CompareTag("Enemy Top"))
+                    obj.transform.parent.gameObject.SetActive(false);
             }
         }
 
@@ -175,8 +178,8 @@ namespace MillenniumImpression.GameScene
 
         public void ResetObject()
         {
-            gameObject.SetActive(true);
             transform.localPosition = originalPosition;
+            spriteRenderer.enabled = true;
             spriteRenderer.flipX = false;
             rb2D.velocity = Vector2.zero;
             isOnGround = false;

@@ -16,7 +16,7 @@ namespace MillenniumImpression.PreviouslyScene
         private IEnumerator EnableButton()
         {
             startButton.SetActive(false);
-            yield return new WaitForSeconds(10.0F);
+            yield return new WaitForSeconds(7.0F);
             startButton.SetActive(true);
         }
     }

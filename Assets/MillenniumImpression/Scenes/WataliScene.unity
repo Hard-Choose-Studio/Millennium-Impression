@@ -254,7 +254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 400, y: 200}
   m_SizeDelta: {x: 160, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143978508
@@ -488,8 +488,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: {fileID: 2008134915}
   nextStory:
-  - ... ...
-  nextScene: 4
+  - "\u300CPinky\uFF5EPinky Pinky\u4E09\u7A2E\u53E3\u5473\uFF5E\u300D"
+  - "\u300C\u9019\u9EBC\u559C\u6B61\u9019\u9996\u6B4C\u554A\uFF1F\u9019\u5E7E\u5929\u4E00\u76F4\u5728\u5531\u3002\u300D"
+  - "\u300C\u5C0D\u554A\uFF01\u800C\u4E14\u5C0F\u7334\u5B50\u597D\u53EF\u611B\uFF01\u300D"
+  - "\u300C\u4E0D\u662F\u559C\u6B61Pinky\u672C\u8EAB\u55CE\uFF1F\u300D"
+  - "\u300C\u7576\u7136\u559C\u6B61\u554A\uFF01\u56E0\u70BA\u751C\u751C\u7684\u800C\u4E14\u6DBC\u6DBC\u7684\uFF0C\u5F88\u597D\u5403\uFF01\u300D"
+  nextScene: 5
   nextButton: {fileID: 143978508}
   yvon: {fileID: 684312413}
   soundPlayer: {fileID: 1173488408}

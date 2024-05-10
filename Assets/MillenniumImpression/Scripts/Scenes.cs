@@ -2,6 +2,7 @@ namespace MillenniumImpression
 {
     public enum Scenes
     {
+        PreviouslyScene,
         StoryScene,
         TapeScene,
         GameScene,

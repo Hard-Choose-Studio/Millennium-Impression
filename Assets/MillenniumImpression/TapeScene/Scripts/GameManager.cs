@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace MillenniumImpression.TapeScene
@@ -64,6 +65,12 @@ namespace MillenniumImpression.TapeScene
             instructmentsCanvas.SetActive(true);
             foreach (ITapeEvent eventObject in eventObjects)
                 eventObject.OnMachineClose();
+            StartCoroutine(FinishAfter10Seconds());
+        }
+
+        private IEnumerator FinishAfter10Seconds()
+        {
+            yield return new WaitForSeconds(20.0F);
             OnSceneFinish();
         }
     }

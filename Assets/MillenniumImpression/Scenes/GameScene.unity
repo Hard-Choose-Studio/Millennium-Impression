@@ -1511,7 +1511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 680, y: 400}
+  m_AnchoredPosition: {x: 400, y: 200}
   m_SizeDelta: {x: 160, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918077272
@@ -1914,13 +1914,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintText: {fileID: 413791473}
   nextStory:
-  - "\u300C\u8981\u4E0D\u8981\u559D\u7DAD\u5927\u529B\uFF1F\u300D"
-  - "\u300C\u7576\u7136\u8981\u4F86\u300D"
-  nextScene: 3
+  - "\u300C\u4F60\u5728\u559D\u4EC0\u9EBC\uFF1F\u7DAD\u5927\u529B\uFF1F\u5EE3\u544A\u88E1\u8AE7\u97F3\u7FA9\u5927\u5229\u7684\u90A3\u500B\uFF1F\u300D"
+  - "\u300C\u5C0D\u554A\uFF0C\u4F60\u8981\u4E0D\u8981\u4E5F\u559D\u559D\u770B\uFF1F\u300D"
+  - "\u300C\u597D\u554A\uFF01\u300D"
+  - "(\u541E\u56A5\u8072)"
+  - "\u300C\u600E\u9EBC\u6A23\uFF1F\u89BA\u5F97\u597D\u559D\u55CE\uFF1F\u300D"
+  - "\u300C\u5169\u500B\u5B57\uFF0C\u6C34\u5566\uFF01\u300D"
+  nextScene: 4
   nextButton: {fileID: 918077272}
   maryGame: {fileID: 199871318}
   mary: {fileID: 1778819608}
   goomba: {fileID: 1834541889}
+  piranhaPlant: {fileID: 1839515671}
   brick1: {fileID: 1918164739}
   brick2: {fileID: 1071075238}
   theEnd: {fileID: 389084847}
@@ -2201,7 +2206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.12263, y: 1}
+  m_Size: {x: 26, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1410154215
 GameObject:
@@ -3103,7 +3108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.122633, y: 27}
+  m_Size: {x: 26, y: 27}
   m_EdgeRadius: 0
 --- !u!1 &1772063421
 GameObject:
@@ -3709,6 +3714,7 @@ GameObject:
   - component: {fileID: 1839515668}
   - component: {fileID: 1839515669}
   - component: {fileID: 1839515670}
+  - component: {fileID: 1839515671}
   m_Layer: 0
   m_Name: Piranha Plant
   m_TagString: Enemy
@@ -3849,6 +3855,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.77, y: 4.66}
   m_EdgeRadius: 0
+--- !u!114 &1839515671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839515666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53fe6e63b912ba45b4d9c97dbf098c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1863512324
 GameObject:
   m_ObjectHideFlags: 0
