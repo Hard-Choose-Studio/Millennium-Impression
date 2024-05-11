@@ -8,6 +8,16 @@ namespace MillenniumImpression.GameScene
         public static GameManager instance;
 
         [SerializeField]
+        private ChangeButton skipButton;
+
+        [SerializeField]
+        private string[] wataliStory;
+        [SerializeField]
+        private string[] ponkyStory;
+        [SerializeField]
+        private string[] aquaOilStory;
+
+        [SerializeField]
         private GameObject maryGame;
         [SerializeField]
         private Mary mary;
@@ -30,7 +40,7 @@ namespace MillenniumImpression.GameScene
 
         private AudioSource bgm;
 
-        private void Awake()
+        protected override void Awake()
         {
             instance = this;
 
@@ -42,6 +52,23 @@ namespace MillenniumImpression.GameScene
             resetObjects[5] = theEnd;
 
             bgm = GetComponent<AudioSource>();
+
+            switch (StoryScene.StoryData.NextAdvertisement())
+            {
+                case 0:
+                    nextStory = wataliStory;
+                    nextScene = Scenes.WataliScene;
+                    break;
+                case 1:
+                    nextStory = ponkyStory;
+                    nextScene = Scenes.PonkyScene;
+                    break;
+                case 2:
+                    nextStory = aquaOilStory;
+                    nextScene = Scenes.AquaOilScene;
+                    break;
+            }
+            base.Awake(); //只有一個SetStoryAndTarget();
         }
 
         private void OnDestroy()

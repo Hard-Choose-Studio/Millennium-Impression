@@ -6,7 +6,7 @@ namespace MillenniumImpression
     {
         public override void OnClick()
         {
-            SceneManager.LoadScene(Scenes.StoryScene.ToString());
+            SceneManager.LoadScene(Scenes.StoryScene.ToString()); //直接轉到StoryScene
         }
     }
 }

@@ -7,7 +7,7 @@ namespace MillenniumImpression.PonkyScene
         [SerializeField]
         private GameObject fruitPrefab;
 
-        private const uint FRUITS_COUNT = 10U;
+        private const uint FRUITS_COUNT = 20U;
         private readonly GameObject[] fruitPrefabs = new GameObject[FRUITS_COUNT];
 
         private void Awake()

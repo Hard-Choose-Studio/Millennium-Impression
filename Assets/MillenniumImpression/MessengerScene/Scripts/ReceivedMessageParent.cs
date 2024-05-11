@@ -12,7 +12,7 @@ namespace MillenniumImpression.MessengerScene
 
         private IEnumerator SendingMessage()
         {
-            yield return new WaitForSeconds(3.0F);
+            yield return new WaitForSeconds(1.5F);
             author.text = authorNameWithColon;
             message.text = GameManager.instance.GetReceivedMessage();
             GameManager.instance.OnMessageReceived();

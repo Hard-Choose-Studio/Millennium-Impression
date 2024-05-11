@@ -15,8 +15,10 @@ namespace MillenniumImpression.PonkyScene
 
         private readonly IPonkyEvent[] eventObjects = new IPonkyEvent[2];
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             instance = this;
             eventObjects[0] = sportCar;
             eventObjects[1] = fruitGenerator;

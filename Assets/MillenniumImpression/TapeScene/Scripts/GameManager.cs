@@ -21,8 +21,10 @@ namespace MillenniumImpression.TapeScene
 
         private readonly ITapeEvent[] eventObjects = new ITapeEvent[3];
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             instance = this;
 
             eventObjects[0] = tape;
@@ -37,9 +39,9 @@ namespace MillenniumImpression.TapeScene
 
         public override void OnTargetFound()
         {
-            base.OnTargetFound();
             if (tape.touchedMachine) //已經碰過了 就無所謂了
                 return;
+            base.OnTargetFound();
             instructmentsCanvas.SetActive(false); //本來是true 讓他們可以先播放 做為緩衝
             foreach (ITapeEvent eventObject in eventObjects)
                 eventObject.OnTargetFound();
@@ -49,6 +51,7 @@ namespace MillenniumImpression.TapeScene
         {
             if (tape.touchedMachine) //已經碰過了 就無所謂了
                 return;
+            base.OnTargetLost();
             foreach (ITapeEvent eventObject in eventObjects)
                 eventObject.OnTargetLost();
         }
@@ -70,7 +73,7 @@ namespace MillenniumImpression.TapeScene
 
         private IEnumerator FinishAfter10Seconds()
         {
-            yield return new WaitForSeconds(20.0F);
+            yield return new WaitForSeconds(10.0F); //至少聽10秒的歌
             OnSceneFinish();
         }
     }

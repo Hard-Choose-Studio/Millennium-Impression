@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 namespace MillenniumImpression.MessengerScene
 {
+    [RequireComponent(typeof(Text))]
+    [RequireComponent(typeof(AudioSource))]
     public class MessengerInputField : MonoBehaviour, IMessengerEvent
     {
         [SerializeField]
         private SendButton sendButton;
+
+        private AudioSource typingAudio;
 
         private Text text;
         private bool pauseCoroutine = false;
@@ -16,6 +20,7 @@ namespace MillenniumImpression.MessengerScene
         private void Awake()
         {
             text = GetComponent<Text>();
+            typingAudio = GetComponent<AudioSource>();
         }
 
         public void OnTargetFound()
@@ -43,12 +48,15 @@ namespace MillenniumImpression.MessengerScene
             {
                 if (!pauseCoroutine)
                 {
+                    if (!typingAudio.isPlaying)
+                        typingAudio.Play();
                     text.text = builder.Append(message[i]).ToString();
                     i++;
                 }
-                yield return new WaitForSeconds(0.1F);
+                yield return new WaitForSeconds(0.05F);
             }
             sendButton.gameObject.SetActive(true);
+            typingAudio.Stop();
         }
 
         public void OnMessageSend()

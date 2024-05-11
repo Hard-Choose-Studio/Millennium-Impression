@@ -24,12 +24,14 @@ namespace MillenniumImpression.MessengerScene
         public void OnMessageReceived()
         {
             button.enabled = true; //開放選擇
+            image.enabled = true;
             text.text = GameManager.instance.GetSendMessage(buttonIndex);
         }
 
         public void OnMessageChoosed()
         {
             button.enabled = false; //結束選擇
+            image.enabled = false;
             text.text = string.Empty;
         }
 

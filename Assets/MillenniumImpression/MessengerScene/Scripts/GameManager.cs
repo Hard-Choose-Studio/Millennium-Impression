@@ -18,6 +18,8 @@ namespace MillenniumImpression.MessengerScene
         [SerializeField]
         private SendMessageParent[] sendMessageTexts;
 
+        private AudioSource sendAudio;
+
         private readonly IMessengerEvent[] eventObjects = new IMessengerEvent[3];
 
         private int messageIndex = 0;
@@ -57,13 +59,17 @@ namespace MillenniumImpression.MessengerScene
 
         public string GetSendMessage() => sendMessages[messageIndex, chosenMessage];
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             instance = this;
 
             eventObjects[0] = messengerInputField;
             eventObjects[1] = messageChooseButton1;
             eventObjects[2] = messageChooseButton2;
+
+            sendAudio = GetComponent<AudioSource>();
         }
 
         private void OnDestroy()
@@ -73,7 +79,7 @@ namespace MillenniumImpression.MessengerScene
 
         private void Start()
         {
-            receivedMessageTexts[messageIndex].SendMessage();
+            receivedMessageTexts[messageIndex].SendMessage(); //¥ÎStart Á×§KAwake¶¶§Ç°ÝÃD
         }
 
         public override void OnTargetFound()
@@ -110,6 +116,8 @@ namespace MillenniumImpression.MessengerScene
 
         public void OnMessageSend()
         {
+            sendAudio.Play();
+
             sendMessageTexts[messageIndex].SendMessage();
 
             foreach (IMessengerEvent eventObject in eventObjects)

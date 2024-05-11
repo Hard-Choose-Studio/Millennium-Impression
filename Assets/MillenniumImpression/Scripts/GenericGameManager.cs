@@ -8,7 +8,7 @@ namespace MillenniumImpression
         public static readonly Action EMPTY_ACTION = () => { };
 
         [SerializeField]
-        protected GameObject hintText;
+        protected GameObject hintObject;
         [SerializeField]
         protected string[] nextStory;
         [SerializeField]
@@ -18,32 +18,36 @@ namespace MillenniumImpression
 
         protected bool isFinished = false;
 
+        protected virtual void Awake()
+        {
+            SetStoryAndTarget();
+        }
+
         public virtual void OnTargetFound()
         {
             if (!isFinished) //如果尚未結束
-                hintText.SetActive(false); //停止顯示提示
+                hintObject.SetActive(false); //停止顯示提示
             //如果已經結束了就算了
         }
 
         public virtual void OnTargetLost()
         {
             if (!isFinished) //如果尚未結束
-                hintText.SetActive(true); //重新顯示提示
+                hintObject.SetActive(true); //重新顯示提示
             //如果已經結束了就算了
         }
 
-        protected virtual void OnSceneFinish() //scene結束的時候
+        protected void OnSceneFinish() //scene結束的時候
         {
             //應由其他事件呼叫使用
             isFinished = true;
-            ShowNextButton();
+            nextButton.gameObject.SetActive(true);
         }
 
-        private void ShowNextButton()
+        protected void SetStoryAndTarget()
         {
             StoryScene.StoryData.SetStory(nextStory);
             StoryScene.StoryData.SetTargetScene(nextScene);
-            nextButton.gameObject.SetActive(true);
         }
     }
 }

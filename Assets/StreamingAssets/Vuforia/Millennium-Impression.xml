@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="Game-Boy" size="15.000000 20.000000" />
+    <ImageTarget name="Television" size="20.000000 26.666666" />
+    <ImageTarget name="Tape" size="2.000000 1.500000" />
     <ImageTarget name="Yahoo-Messenger" size="0.800000 0.667019" />
     <ImageTarget name="Watali" size="0.500000 0.528351" />
     <ImageTarget name="Ponky" size="0.800000 0.342675" />

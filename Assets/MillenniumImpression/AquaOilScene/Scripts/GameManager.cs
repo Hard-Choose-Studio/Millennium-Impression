@@ -20,8 +20,10 @@ namespace MillenniumImpression.AquaOilScene
 
         private bool vanishing = false;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
+
             instance = this;
 
             eventObjects[0] = aquaOil;

@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -49, y: -102}
+  m_SizeDelta: {x: -200, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399222894
 MonoBehaviour:
@@ -183,18 +183,19 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2d6db2c180e21874489697006f0edd5f, type: 3}
-    m_FontSize: 72
+    m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 0
     m_MaxSize: 96
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: "\u8AAA\u8D77\u5343\u79A7\u5E74\u6642\uFF0C\u4F60\u7684\u8166\u6D77\u4E2D\u6703\u6D6E\u73FE\u4EC0\u9EBC\uFF1F\n\u662F\u6D41\u884C\u4E00\u6642y2k\u98A8\u683C\uFF1F\u9084\u662F\u4EBA\u5FC3\u60F6\u60F6\u7684\u5343\u79A7\u87F2\u5371\u6A5F\u8207\u672B\u65E5\u9810\u8A00\uFF1F\r\n\u6216\u662F\u5404\u7A2E\u81BE\u7099\u4EBA\u53E3\u7684\u6B4C\u66F2\u3001\u6232\u5287\u3001\u5EE3\u544A\uFF0C\u65B9\u4FBF\u651C\u5E36\u96A8\u6642\u904A\u73A9\u7684Gameboy\u904A\u6232\u6A5F\uFF0C\u806F\u7E6B\u8D77\u5927\u5BB6\u7684\u5373\u6642\u901A\u3001MSN\uFF1F\r\n\u2014\u2014\u9019\u662F\u6211\u5011\u773C\u4E2D\u7684\u300C\u5343\u79A7\u5370\u8C61\u300D\u3002\r\n\u73FE\u5728\u6E96\u5099\u597D\u4F86\u4E00\u8D9F\u61F7\u820A\u4E4B\u65C5\u4E86\u55CE\uFF1F\r"
+    m_LineSpacing: 0.8
+  m_Text: "\u8AAA\u8D77\u5343\u79A7\u5E74\uFF0C\u4F60\u7684\u8166\u6D77\u4E2D\u6703\u6D6E\u73FE\u4EC0\u9EBC\uFF1F\n\u662F\u6D41\u884C\u4E00\u6642\u7684Y2k\uFF1F\n\u9084\u662F\u4EBA\u5FC3\u60F6\u60F6\u7684\u5343\u79A7\u87F2\u8207\u672B\u65E5\u9810\u8A00\uFF1F\r\n\u6216\u662F\u5404\u7A2E\u81BE\u7099\u4EBA\u53E3\u7684\u6B4C\u66F2\u3001\u6232\u5287\u3001\u5EE3\u544A\uFF0C\n\u96A8\u6642\u904A\u73A9\u7684Game
+    Boy\uFF0C\n\u806F\u7E6B\u8D77\u5927\u5BB6\u7684\u5373\u6642\u901A\u3001MSN\uFF1F\r\n\u2014\u2014\u9019\u662F\u6211\u5011\u773C\u4E2D\u7684\u300C\u5343\u79A7\u5370\u8C61\u300D\u3002\r\n\u73FE\u5728\u6E96\u5099\u597D\u4F86\u4E00\u8D9F\u61F7\u820A\u4E4B\u65C5\u4E86\u55CE\uFF1F\r"
 --- !u!222 &399222895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -628,7 +629,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bee61972ad0fb5a4ba34ec138687ef26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a40e9eede899f2a43b0846eea9fd192b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
