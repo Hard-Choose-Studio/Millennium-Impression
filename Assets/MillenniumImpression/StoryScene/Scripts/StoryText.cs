@@ -22,16 +22,29 @@ namespace MillenniumImpression.StoryScene
             text = GetComponent<Text>();
             wataliAudioSource = GetComponent<AudioSource>();
             StartCoroutine(StoryTeller());
-            if (StoryData.targetScene == Scenes.WataliScene)
-                StartCoroutine(DrinkWatali());
+
+            if (StoryData.targetScene == Scenes.PreviouslyScene)
+                transform.localPosition = Vector3.zero;
+            else
+            {
+                if (StoryData.targetScene == Scenes.WataliScene)
+                    StartCoroutine(DrinkWatali());
+                transform.localPosition = new(300.0F, 0.0F, 0.0F);
+            }
         }
 
         private IEnumerator StoryTeller()
         {
             nextButton.SetActive(false);
             StringBuilder builder = new();
-            foreach (char c in string.Join('\n', StoryData.story))
+            string story = string.Join('\n', StoryData.story);
+            foreach (char c in story)
             {
+                if (Input.touchCount != 0)
+                {
+                    text.text = story;
+                    break;
+                }
                 text.text = builder.Append(c).ToString();
                 yield return new WaitForSeconds(TYPE_TIME);
             }

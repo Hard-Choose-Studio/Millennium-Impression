@@ -171,7 +171,7 @@ MonoBehaviour:
   background: {fileID: 1519507335}
   buttonText: {fileID: 1098312172}
   storyText: {fileID: 1625129055}
-  backgroundSprite: {fileID: 21300000, guid: bee61972ad0fb5a4ba34ec138687ef26, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: a54e7292d5ced0d4180ebaeea52123dd, type: 3}
   tapeSprite: {fileID: 21300000, guid: 78cec4a68f2c75a4c93f626e7ea364c3, type: 3}
   gameSprite: {fileID: 21300000, guid: 91ba940afac253344bac69fd41825290, type: 3}
   wataliSprite: {fileID: 21300000, guid: 4e7bdca2fd6f66c48bb15b1c5c906851, type: 3}
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bee61972ad0fb5a4ba34ec138687ef26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a54e7292d5ced0d4180ebaeea52123dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
