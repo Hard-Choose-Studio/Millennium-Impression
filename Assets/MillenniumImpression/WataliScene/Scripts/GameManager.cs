@@ -12,7 +12,7 @@ namespace MillenniumImpression.WataliScene
         [SerializeField]
         private SoundPlayer soundPlayer;
 
-        private readonly IWataliEvent[] evnetObjects = new IWataliEvent[2];
+        private readonly IWataliEvent[] eventObjects = new IWataliEvent[2];
 
         protected override void Awake()
         {
@@ -20,8 +20,8 @@ namespace MillenniumImpression.WataliScene
 
             instance = this;
 
-            evnetObjects[0] = yvon;
-            evnetObjects[1] = soundPlayer;
+            eventObjects[0] = yvon;
+            eventObjects[1] = soundPlayer;
         }
 
         private void OnDestroy()
@@ -34,7 +34,7 @@ namespace MillenniumImpression.WataliScene
             if (isFinished)
                 return;
             base.OnTargetFound();
-            foreach (IWataliEvent e in evnetObjects)
+            foreach (IWataliEvent e in eventObjects)
                 e.OnTargetFound();
         }
 
@@ -43,13 +43,13 @@ namespace MillenniumImpression.WataliScene
             if (isFinished)
                 return;
             base.OnTargetLost();
-            foreach (IWataliEvent e in evnetObjects)
+            foreach (IWataliEvent e in eventObjects)
                 e.OnTargetLost();
         }
 
         public void OnGood()
         {
-            foreach (IWataliEvent e in evnetObjects)
+            foreach (IWataliEvent e in eventObjects)
                 e.OnGood();
             OnSceneFinish();
         }

@@ -38,7 +38,7 @@ namespace MillenniumImpression.GameScene
         private Vector3 originalPosition;
         private bool isOnGround;
         private bool fire;
-        private bool invicinble;
+        private bool invincible;
 
         private void Awake()
         {
@@ -110,7 +110,7 @@ namespace MillenniumImpression.GameScene
                 Fire(true);
                 Destroy(obj);
             }
-            else if (!invicinble)
+            else if (!invincible)
             {
                 if (obj.CompareTag("Enemy"))
                     Damage();
@@ -154,7 +154,7 @@ namespace MillenniumImpression.GameScene
 
         private IEnumerator Invincible()
         {
-            invicinble = true; //µL¼Ä
+            invincible = true; //µL¼Ä
             Color newColor;
             for (int i = 0; i < 10; i++)
             {
@@ -166,7 +166,7 @@ namespace MillenniumImpression.GameScene
             newColor = spriteRenderer.color;
             newColor.a = 1.0F;
             spriteRenderer.color = newColor;
-            invicinble = false;
+            invincible = false;
         }
 
         public void ShootFireBall()
@@ -184,7 +184,7 @@ namespace MillenniumImpression.GameScene
             rb2D.velocity = Vector2.zero;
             isOnGround = false;
             Fire(false);
-            invicinble = false;
+            invincible = false;
         }
     }
 }
